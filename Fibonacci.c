@@ -9,16 +9,15 @@ sirului lui Fibonacci mai mici sau egale cu N.
 
 int f(int n)
 {
-	int i;
+	int i = 0;
 	long long int f0 = 0, f1 = 1, fn = 0;
-	for (i = 1; i <= n; i++)
-	{
+	do {
 		printf("f%d=%lli\n", i, f0);
 		fn = f0 + f1;
 		f0 = f1;
 		f1 = fn;
-
-	}
+		i++;
+	} while (f0 <= n);
 	return 0;
 }
 
