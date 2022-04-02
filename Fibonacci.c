@@ -24,12 +24,29 @@ int f(int n)
 
 int main()
 {
-	int n;
-	printf("Dati numarul natural N=");
-	scanf("%d", &n);
-	printf("------------------------------------\n");
-	printf("Sirul lui Fibonacci pentru N=%d este: \n", n);
-	f(n);
-	system("pause");
+	int n, opt;
+	while (1)
+	{
+		printf("1. Calculati Fibonacci.\n");
+		printf("2. Exit.\n");
+		printf("-----------------------------\n");
+		printf("Dati optiunea: ");
+		scanf("%d", &opt);
+		switch (opt)
+		{
+		case 1:
+			printf("Dati numarul natural N=");
+			scanf("%d", &n);
+			printf("------------------------------------\n");
+			printf("Sirul lui Fibonacci pentru N=%d este: \n", n);
+			f(n);
+			printf("------------------------------------\n");
+			break;
+		case 2:exit(0);
+			break;
+		default:printf("Optiune gresita.\n");
+			break;
+		}
+	}
 	return 0;
 }
